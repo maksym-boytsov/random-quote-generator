@@ -9,24 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var quoteLabel: UILabel!
-    var pickerData = [
-        "Confucius": ["“By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest.”", "“Everything has beauty, but not everyone sees it.”", "“Wheresoever you go, go with all your heart.”"],
-        "Ernest Hemingway": ["“There is no friend as loyal as a book.”", "“There is nothing to writing. All you do is sit down at a typewriter and bleed.”", "“Happiness in intelligent people is the rarest thing I know.”"],
-        "Friedrich Nietzsche": ["“Blessed are the forgetful, for they get the better even of their blunders.”", "“The snake which cannot cast its skin has to die. As well the minds which are prevented from changing their opinions; they cease to be mind.”", "“One must be a sea, to receive a polluted stream without becoming impure.”"]
+    var activeAuthor: String? = nil
+    
+    var data = [
+        "Marilyn Monroe": ["I believe that everything happens for a reason. People change so that you can learn to let go, things go wrong so that you appreciate them when they're right, you believe lies so you eventually learn to trust no one but yourself, and sometimes good things fall apart so better things can fall together.", "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.", "Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.", "If you can make a woman laugh, you can make her do anything.", "A wise girl kisses but doesn't love, listens but doesn't believe, and leaves before she is left.", "I am good, but not an angel. I do sin, but I am not the devil. I am just a small girl in a big world trying to find someone to love."],
+        "Oscar Wilde": ["Be yourself; everyone else is already taken.", "Always forgive your enemies; nothing annoys them so much.", "To live is the rarest thing in the world. Most people exist, that is all.", "I am so clever that sometimes I don't understand a single word of what I am saying.", "We are all in the gutter, but some of us are looking at the stars."],
     ]
+    
+    @IBAction func chooseOscar(_ sender: Any) {
+        activeAuthor = "Oscar Wilde"
+    }
+    
+    @IBAction func chooseMarilyn(_ sender: Any) {
+        activeAuthor = "Marilyn Monroe"
+    }
+    
+    @IBAction func generateQuote(_ sender: Any) {
+        if let author = activeAuthor {
+            quoteLabel.text = data[author]?.randomElement()
+        }
+        else {
+            quoteLabel.text = "Please, choose an author and try again"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    @IBAction func pickConfuciusQuote(_ sender: Any) {
-        quoteLabel.text = pickerData["Confucius"]?.randomElement()
-    }
-    @IBAction func pickHemingwayQuote(_ sender: Any) {
-        quoteLabel.text = pickerData["Ernest Hemingway"]?.randomElement()
-    }
-    @IBAction func pickNietzscheQuote(_ sender: Any) {
-        quoteLabel.text = pickerData["Friedrich Nietzsche"]?.randomElement()
     }
 }

@@ -15,56 +15,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="pIN-NB-3jf">
-                                <rect key="frame" x="57" y="350" width="300" height="196.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="163" translatesAutoresizingMaskIntoConstraints="NO" id="8d7-XF-Zhq">
+                                <rect key="frame" x="57" y="243" width="300" height="410.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There will be a quote" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXX-Rp-wxN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKL-5P-Da9">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="hNk-dy-lG8"/>
+                                            <constraint firstAttribute="width" constant="300" id="W1g-F3-hVD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Al-hP-GVV">
-                                        <rect key="frame" x="83.5" y="86.5" width="133" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="spU-v0-kaz">
+                                        <rect key="frame" x="21" y="183.5" width="258" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRb-yH-zrg">
-                                                <rect key="frame" x="31.5" y="0.0" width="70" height="30"/>
-                                                <state key="normal" title="Confucius"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEy-MO-2vk">
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="30"/>
+                                                <state key="normal" title="Marilyn Monroe"/>
                                                 <connections>
-                                                    <action selector="pickConfuciusQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5Q-dn-SZX"/>
+                                                    <action selector="chooseMarilyn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohq-d2-jhJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEi-0D-X0j">
-                                                <rect key="frame" x="2.5" y="40" width="128" height="30"/>
-                                                <state key="normal" title="Ernest Hemingway"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-M9-KyW">
+                                                <rect key="frame" x="174" y="0.0" width="84" height="30"/>
+                                                <state key="normal" title="Oscar Wilde"/>
                                                 <connections>
-                                                    <action selector="pickHemingwayQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Gd-cz-idZ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI7-iC-GF2">
-                                                <rect key="frame" x="0.0" y="80" width="133" height="30"/>
-                                                <state key="normal" title="Friedrich Nietzsche"/>
-                                                <connections>
-                                                    <action selector="pickNietzscheQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DHj-V1-hhX"/>
+                                                    <action selector="chooseOscar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9x4-xb-780"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGl-Ro-MWQ">
+                                        <rect key="frame" x="75" y="376.5" width="150" height="34"/>
+                                        <color key="backgroundColor" red="0.90083732780000003" green="0.88975983970000005" blue="0.93219721499999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="kTx-zW-LRE"/>
+                                        </constraints>
+                                        <state key="normal" title="Generate quote">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="generateQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VyQ-5B-IRh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pIN-NB-3jf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OH2-FL-jyg"/>
-                            <constraint firstItem="pIN-NB-3jf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fZM-ID-pKa"/>
+                            <constraint firstItem="8d7-XF-Zhq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EPa-kx-32S"/>
+                            <constraint firstItem="8d7-XF-Zhq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xed-TI-yjx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="quoteLabel" destination="sXX-Rp-wxN" id="Hzz-Lg-uGw"/>
+                        <outlet property="quoteLabel" destination="WKL-5P-Da9" id="NLj-ck-LMn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
