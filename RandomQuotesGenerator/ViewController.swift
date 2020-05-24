@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  RandomQuotesGenerator
-//
-//  Created by Maksym on 16/05/2020.
-//  Copyright © 2020 Maksym. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
